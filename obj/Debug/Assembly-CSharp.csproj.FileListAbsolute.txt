@@ -1,0 +1,2 @@
+C:\Users\Karolis\Space Invaders Copy\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\Karolis\Space Invaders Copy\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

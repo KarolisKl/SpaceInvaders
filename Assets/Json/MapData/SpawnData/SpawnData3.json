@@ -1,0 +1,14 @@
+{ "objects": [
+	{
+    "timer": 5,
+    "count": 2,
+    "enemies": [10,0,0,0]
+	},
+	
+	{
+    "timer": 2,
+    "count": 8, 
+    "enemies": [16,0,0,0]
+	}
+]
+}

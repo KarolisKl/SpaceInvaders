@@ -1,0 +1,34 @@
+{
+  "objects": [
+    {
+      "x": 6,
+      "y": 13,
+      "mesh": "Json/Meshes/TRight.json"
+    },
+    {
+      "x": 30,
+      "y": 13,
+      "mesh": "Json/Meshes/TLeft.json"
+    },
+    {
+      "x": 17,
+      "y": 16,
+      "mesh": "Json/Meshes/T.json"
+    },
+    {
+      "x": 8,
+      "y": 20,
+      "mesh": "Json/Meshes/LFormR.json"
+    },
+    {
+      "x": 24,
+      "y": 20,
+      "mesh": "Json/Meshes/LFormL.json"
+    }
+
+
+
+
+
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "objects": [
+    {
+		  "x": 4,
+		  "y": 12,
+		  "mesh": "Json/Meshes/Square.json"
+    },
+    {
+		  "x": 11,
+		  "y": 12,
+		  "mesh": "Json/Meshes/Square.json"
+    },
+    {
+		  "x": 18,
+		  "y": 12,
+		  "mesh": "Json/Meshes/Square.json"
+    },
+    {
+		  "x": 25,
+		  "y": 12,
+		  "mesh": "Json/Meshes/Square.json"
+    },
+    {
+		  "x": 32,
+		  "y": 12,
+		  "mesh": "Json/Meshes/Square.json"
+    },
+    {
+		  "x": 10,
+		  "y": 17,
+		  "mesh": "Json/Meshes/Line.json"
+    },
+	{
+		"x": 25,
+		"y": 17,
+		"mesh": "Json/Meshes/Line.json"
+	},
+	{
+		"x": 5,
+		"y": 22,
+		"mesh": "Json/Meshes/TRight.json"
+    },
+	{
+		"x": 30,
+		"y": 22,
+		"mesh": "Json/Meshes/TLeft.json"
+	}
+
+
+
+  ]
+}
