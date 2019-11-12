@@ -299,8 +299,9 @@ public class MapGeneration : MonoBehaviour
             Debug.Log("No more levels :(");
             return;
         }
+        currentLevel = level + 1;
         ClearMap();
-        var path = Application.dataPath + "/Json/MapData/Maps/Level" + (level + 1) + ".json";
+        var path = Application.dataPath + "/Json/MapData/Maps/Level" + currentLevel + ".json";
         var jsonString = File.ReadAllText(path);
         MapDataJson MapDataJson = JsonUtility.FromJson<MapDataJson>(jsonString);
         MapData data = new MapData();
@@ -309,6 +310,7 @@ public class MapGeneration : MonoBehaviour
         SpawnManager.instance.waves = data.spawnData.waves;
         SpawnManager.instance.StartSpawning();
         data.meshes = JsonHelper.getJsonArray<BlockadeMesh>(File.ReadAllText(Application.dataPath + "/" + MapDataJson.meshes));
+        currentLevel = level ;
 
         CreateMap(data.meshes);
     }

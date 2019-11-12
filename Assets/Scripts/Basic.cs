@@ -20,16 +20,19 @@ public class Basic : Item
         {
             case Stat.Ammo:
                 {
+                    Debug.Log("Picked up Ammo");
                     player.AddAmmo(value);
                     break;
                 }
             case Stat.Points:
                 {
+                    Debug.Log("Picked up Points");
                     player.AddPoints(value);
                     break;
                 }
             case Stat.Armor:
                 {
+                    Debug.Log("Picked up Armor");
                     player.AddArmor(value);
                     break;
                 }
