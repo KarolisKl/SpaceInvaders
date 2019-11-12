@@ -58,6 +58,7 @@ public class SpawnManager : MonoBehaviour
     {
         if(!spawning && enemyCount == 0) // level is done, load another
         {
+            Debug.Log("level done, loading next level");
             MapGeneration.instance.StartLevel(MapGeneration.instance.currentLevel + 1);
         }
     }

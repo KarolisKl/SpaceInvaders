@@ -7,10 +7,10 @@ public class SimpleEnemy : EnemyBase
 
     private void Start()
     {
-        health = 20;
-        movementCycles = new Vector3[][] { MovementCycles.Line(), MovementCycles.Line(true), new Vector3[] { Vector3.forward }, new Vector3[] { Vector3.back }};
+        health = 10;
+        movementCycles = new Vector3[][] { MovementCycles.Line(), MovementCycles.Line(true), new Vector3[] { Vector3.forward }, new Vector3[] { Vector3.back }, MovementCycles.Circle(), MovementCycles.Circle(true)};
         weapons = new GameObject[movementCycles.Length];
-        coolDown = 2f;
+        coolDown = 4f;
         lootModifier = 1f;
         for(int i = 0; i < movementCycles.Length; i++)
         {
@@ -18,4 +18,6 @@ public class SimpleEnemy : EnemyBase
         }
         ChangeCycle();
     }
+
+
 }

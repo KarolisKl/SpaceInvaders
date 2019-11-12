@@ -19,7 +19,7 @@ public class MapGeneration : MonoBehaviour
     void Start()
     {
         mapX = 36;
-        mapY = 32;
+        mapY = 34;
 
         StartLevel(currentLevel);
 

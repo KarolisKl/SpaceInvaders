@@ -60,16 +60,15 @@ public abstract class EnemyBase : MonoBehaviour
                 finalPoint += direction;
             }
             // can perform cycle if enemy ends up in enemy area
-            if (MapGeneration.instance.PointIsInMap(finalPoint)) // change?
+            if (MapGeneration.instance.PointIsInMap(finalPoint))
             {
                 availableCycles.Add(cycle);
                 availableCycleIndexes.Add(i);
             }
         }
-
+        //if (availableCycles.Count > 0)
         // select random cycle
         int index = Random.Range(0, availableCycles.Count);
-        Debug.Log(availableCycles.Count);
         currentCycle = availableCycles[index];
         currentWeapon = weapons[availableCycleIndexes[index]];
 

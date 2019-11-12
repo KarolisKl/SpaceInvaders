@@ -10,6 +10,18 @@ public abstract class EnemyWeaponBase : MonoBehaviour
     public float coolDown;
     public bool canShoot = true;
 
+
+    public virtual void Start()
+    {
+        StartCoroutine("Destroy");
+    }
+
+    IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(8f);
+        Destroy(this.gameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {

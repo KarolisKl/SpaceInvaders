@@ -28,20 +28,12 @@ public class Inventory: MonoBehaviour
 
     void InitializeItems()
     {
-        Object[][] objects = new Object[][]
-        {
-            Resources.LoadAll("Items/Basic", typeof(Basic))
-           // Resources.LoadAll("Items/PowerUps", typeof(Weapon)), // not developed :(
-           // Resources.LoadAll("Items/Weapons", typeof(PowerUp)) // not developed :(
-
-        };
-
         List<Item> basicItems = new List<Item>();
         foreach (Object obj in Resources.LoadAll("Items/Basic", typeof(Basic)))
         {
             basicItems.Add((Basic)obj);
         }
-     /*   List<Item> weaponItems = new List<Item>();
+      /*  List<Item> weaponItems = new List<Item>();
         foreach (Object obj in Resources.LoadAll("Items/Weapons", typeof(Weapon)))
         {
             weaponItems.Add((Weapon)obj);
@@ -50,14 +42,15 @@ public class Inventory: MonoBehaviour
         foreach (Object obj in Resources.LoadAll("Items/Basic", typeof(PowerUp)))
         {
             powerUpItems.Add((PowerUp)obj);
-        }
+        }*/
 
         lootTables = new Item[][]{
             basicItems.ToArray(),
-            weaponItems.ToArray(),
-            powerUpItems.ToArray()
-        };*/
+           // weaponItems.ToArray(), // no time to implement;
+          //  powerUpItems.ToArray() // no time to implement;
+        };
     }
+   
 
     public void Add(Item item)
     {
@@ -82,9 +75,6 @@ public class Inventory: MonoBehaviour
     {
 
         items.Remove(item);
-
-    //   if (onItemChangedCallback != null)
-         //   onItemChangedCallback.Invoke();
     }
 
     // return item from drop table
@@ -99,7 +89,6 @@ public class Inventory: MonoBehaviour
             }
             tableIndex++;
         }
-        Debug.Log(tableIndex);
         int itemIndex = Random.Range(0, lootTables[tableIndex].Length);
         return lootTables[tableIndex][itemIndex];
     }

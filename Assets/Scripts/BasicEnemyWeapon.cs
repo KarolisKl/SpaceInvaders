@@ -5,11 +5,12 @@ using UnityEngine;
 public class BasicEnemyWeapon : EnemyWeaponBase
 {
 
-    public void Start()
+    public override void Start()
     {
         dmg = 20;
         speed = 10;
-        coolDown = 2f;
+        coolDown = 4f;
+        base.Start();
     }
 
     public override void Movement()

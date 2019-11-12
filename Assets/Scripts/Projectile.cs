@@ -9,10 +9,20 @@ public abstract class Projectile : MonoBehaviour
     public float speed;
 
 
+    private void Start()
+    {
+        StartCoroutine("Destroy");
+    }
     // Update is called once per frame
     void Update()
     {
         Movement();
+    }
+
+    IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(8f);
+        Destroy(this.gameObject);
     }
 
     public virtual void Movement()
@@ -25,14 +35,21 @@ public abstract class Projectile : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
         {
-            Debug.Log("opa");
             Contact(other.transform.GetComponent<EnemyBase>());
+        } else if (other.gameObject.tag == "Projectile") // collided with enemy projectile
+        {
+            
+            Destroy(other.transform.parent.gameObject);
         }
         Destroy(this.gameObject);
+
+        // add colliding with projectiles
+        // add colliding with enemies
+        // add colliding with blockade;
     }
 
 
