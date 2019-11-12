@@ -29,7 +29,7 @@ public class PlayerBehavior : MonoBehaviour
         float translation = horizontal * speed * Time.deltaTime;
         if(transform.position.x + (horizontal / 2) > 0 && transform.position.x + (horizontal / 2) < MapGeneration.instance.mapX)
         {
-            transform.Translate(translation * Time.deltaTime, 0, 0);
+            transform.Translate(translation, 0, 0);
             // add rotation to the side
         }
 

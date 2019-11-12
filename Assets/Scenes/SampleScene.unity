@@ -715,7 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6094a07cc7208cd499eea2e28d273b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1300
+  speed: 12
   ammo: 0
   currentWeapon: {fileID: 0}
 --- !u!1 &963194225
