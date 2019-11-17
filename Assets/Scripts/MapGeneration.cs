@@ -208,7 +208,7 @@ public class MapGeneration : MonoBehaviour
         goMesh.Clear();
         goMesh.vertices = vertices.ToArray();
         goMesh.triangles = triangles.ToArray();
-        goMesh.Optimize();
+        //goMesh.Optimize();
         goMesh.RecalculateNormals();
         go.AddComponent<MeshCollider>().convex = true;
         go.GetComponent<Renderer>().material = new Material(Shader.Find("Diffuse"));
