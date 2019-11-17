@@ -14,7 +14,7 @@ public class MapGeneration : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        currentLevel = 0;
+        currentLevel = 1;
     }
     void Start()
     {
@@ -293,6 +293,7 @@ public class MapGeneration : MonoBehaviour
 
     public void StartLevel(int level)
     {
+        level = 1;
         Debug.Log("Starting level " + (level + 1)); 
         if (level > 3)
         {
